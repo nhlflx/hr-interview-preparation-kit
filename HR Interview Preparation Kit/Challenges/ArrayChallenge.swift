@@ -31,4 +31,36 @@ class ArrayChallenge {
         return max
     }
     
+    
+    
+    /// [New Year Chaos](https://www.hackerrank.com/challenges/new-year-chaos/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays)
+    /// - Parameter q: an array of integers
+    /// - Returns: print an integer representing the minimum number of bribes necessary, or Too chaotic if the line configuration is not possible.
+    func minimumBribes(q: [Int]) -> Void {
+        var index = 0
+        var brides = 0
+        var expectedA = index + 1
+        var expectedB = index + 2
+        var expectedC = index + 3
+        while index < q.count && brides != -1 {
+            if (q[index] == expectedA){
+                expectedA = expectedB
+                expectedB = expectedC
+                expectedC += 1
+            }else if (q[index] == expectedB){
+                brides += 1
+                expectedB = expectedC
+                expectedC += 1
+            } else if (q[index] == expectedC){
+                brides += 2
+                expectedC += 1
+            } else {
+                brides = -1
+            }
+            index += 1
+        }
+        let response = (brides > -1) ? String(brides) : "Too chaotic"
+        print(response)
+    }
+    
 }

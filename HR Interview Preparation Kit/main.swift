@@ -25,3 +25,5 @@ arrayChallenge.hourglassSum(arr: [[1,1,1,0,0,0],
                                   [0,0,0,2,0,0],
                                   [0,0,1,2,4,0]])
 
+arrayChallenge.minimumBribes(q: [5,1,2,3,7,8,6,4])
+arrayChallenge.minimumBribes(q: [1,2,5,3,7,8,6,4])
