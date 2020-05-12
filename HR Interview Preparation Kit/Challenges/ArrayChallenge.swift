@@ -63,4 +63,23 @@ class ArrayChallenge {
         print(response)
     }
     
+    /// [Left Rotation](https://www.hackerrank.com/challenges/ctci-array-left-rotation/problem?h_l=interview&playlist_slugs%5B%5D=interview-preparation-kit&playlist_slugs%5B%5D=arrays)
+    /// - Parameters:
+    ///   - a: an array of integers
+    ///   - d: an integer , the number of rotations.
+    /// - Returns: the updated array, after performing  left rotations.
+    func rotLeft(a: [Int], d: Int) -> [Int] {
+        
+        var aplus = a
+        var rotate:[Int] = []
+        for _ in 0...d-1 {
+            rotate.append(aplus.removeFirst())
+        }
+        aplus.append(contentsOf: rotate)
+        
+        return aplus
+
+    }
+
+    
 }

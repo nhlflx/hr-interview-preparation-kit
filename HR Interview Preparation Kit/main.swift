@@ -27,3 +27,7 @@ arrayChallenge.hourglassSum(arr: [[1,1,1,0,0,0],
 
 arrayChallenge.minimumBribes(q: [5,1,2,3,7,8,6,4])
 arrayChallenge.minimumBribes(q: [1,2,5,3,7,8,6,4])
+
+arrayChallenge.rotLeft(a: [1,2,3,4,5], d: 2)
+arrayChallenge.rotLeft(a: [1,2,3,4,5], d: 4)
+
